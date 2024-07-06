@@ -2,15 +2,15 @@ import React from 'react';
 import { CssVarsProvider } from '@mui/joy/styles';
 import CssBaseline from '@mui/joy/CssBaseline';
 import Box from '@mui/joy/Box';
+import { Outlet } from 'react-router-dom';
 import Sidebar from '../components/dashboard/Sidebar';
 import Header from '../components/dashboard/Header';
-import MainDash from '../components/categories/MainDash';
 
 const DashboardPage = () => {
   return (
     <CssVarsProvider disableTransitionOnChange>
       <CssBaseline />
-      <Box sx={{ display: 'flex', minHeight: '200dvh' }}>
+      <Box sx={{ display: 'flex' }}>
         <Sidebar />
         <Header />
         <Box
@@ -24,11 +24,10 @@ const DashboardPage = () => {
             flexDirection: 'column',
             minWidth: 0,
             height: '100dvh',
-            // fontFamily: 'Plus Jakarta Sans, sans-serif',
             gap: 1,
             overflowX: 'hidden',
           }}>
-          <MainDash />
+          <Outlet />
         </Box>
       </Box>
     </CssVarsProvider>

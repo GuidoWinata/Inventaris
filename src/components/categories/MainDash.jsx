@@ -7,6 +7,8 @@ import { useTheme } from '@mui/joy/styles';
 
 import CardTersedia from './Card';
 import Sect2 from './Sect2';
+import { TblDash1 } from '../tabel/TblDash1';
+import { TblDash2 } from '../tabel/TblDash2';
 
 export const MainDash = () => {
   const { mode } = ColorSchemeToggle();
@@ -45,9 +47,12 @@ export const MainDash = () => {
           flexWrap: 'wrap',
           gap: 5,
           mx: 3,
+          height: '400vh',
         }}>
         <CardTersedia />
         <Sect2 />
+        <TblDash1 />
+        <TblDash2 />
       </Box>
     </>
   );

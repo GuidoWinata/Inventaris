@@ -163,3 +163,36 @@ export const monthDataSeries1 = {
 export const monthDataSeries2 = {
   prices: [8423.7, 8423.5, 8514.3, 8481.85, 8487.7, 8506.9, 8626.2, 8668.95, 8602.3, 8607.55, 8512.9, 8496.25, 8600.65, 8881.1, 9040.85, 8340.7, 8165.5, 8122.9, 8107.85, 8128.0],
 };
+
+function createData(nama, deskripsi, kategori, lokasi, status) {
+  return { nama, deskripsi, kategori, lokasi, status };
+}
+
+export const maintenance = [
+  createData('Proyektor', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Data', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Monitor', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Blabla', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Keyboard', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Kabel', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Sound', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Mic', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('TV LED', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Lemari Listrik', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Kulkas', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Laptop', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Laptop Vivo', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Laptop Asus', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+  createData('Laptop Samsung', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Maintenance'),
+];
+
+export const dipinjam = [
+  createData('Proyektor', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Dipinjam'),
+  createData('Proyektor', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Dipinjam'),
+  createData('Proyektor', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Dipinjam'),
+  createData('Proyektor', 'lorem ipsum dolor sit amet', 'Elektronik', 'Lab RPL', 'Dipinjam'),
+];
+
+export const kategori = {
+  data: ['Semua', 'Elektronik', 'Asesoris', 'Hiasan', 'Peralatan', 'Alat'],
+};

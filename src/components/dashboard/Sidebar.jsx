@@ -7,6 +7,7 @@ import Divider from '@mui/joy/Divider';
 import IconButton from '@mui/joy/IconButton';
 import Logo from '/assets/Logo.svg';
 import List from '@mui/joy/List';
+import { Link } from 'react-router-dom';
 import ListItem from '@mui/joy/ListItem';
 import ListItemButton, { listItemButtonClasses } from '@mui/joy/ListItemButton';
 import Typography from '@mui/joy/Typography';
@@ -43,48 +44,49 @@ function Toggler({ defaultExpanded = false, renderToggle, children }) {
 }
 
 const ListItemWithIcon = ({ IconComponent, text, href, onClick, selected, children }) => {
-  const theme = useTheme();
-  const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const { mode } = ColorSchemeToggle();
   return (
     <ListItem
       sx={{
         gap: 1.5,
       }}>
-      <ListItemButton
-        onClick={onClick}
-        component={href ? 'a' : 'div'}
-        href={href}
-        sx={{
-          bgcolor: selected ? '#2D8EFF' : 'inherit',
-          py: 1,
-          mt: 1,
-          '&:hover': {
-            bgcolor: selected ? 'inherit' : 'transparent',
-            '& .MuiTypography-root, & .MuiSvgIcon-root': {
-              color: selected ? '#2D8EFF' : 'inherit',
+      <Link to={href} style={{ textDecoration: 'none', display: 'flex' }}>
+        <ListItemButton
+          onClick={onClick}
+          component={href ? 'a' : 'div'}
+          href={href}
+          sx={{
+            bgcolor: selected ? '#2D8EFF' : 'inherit',
+            width: 250,
+            py: 1,
+            mt: 1,
+            '&:hover': {
+              bgcolor: selected ? 'inherit' : 'transparent',
+              '& .MuiTypography-root, & .MuiSvgIcon-root': {
+                color: selected ? '#2D8EFF' : 'inherit',
+              },
             },
-          },
-        }}>
-        <IconComponent
-          sx={{
-            fontSize: '26px',
-            color: mode === 'light' || selected ? 'white' : 'black',
-            color: selected ? 'white' : 'inherit',
-          }}
-          className="MuiSvgIcon-root"
-        />
-        <Typography
-          sx={{
-            color: mode === 'light' || selected ? 'white' : 'black',
-            color: selected ? 'white' : 'inherit',
-          }}
-          className="MuiTypography-root"
-          level="title-sm">
-          {text}
-        </Typography>
-        {children}
-      </ListItemButton>
+          }}>
+          <IconComponent
+            sx={{
+              fontSize: '26px',
+              color: mode === 'light' || selected ? 'white' : 'black',
+              color: selected ? 'white' : 'inherit',
+            }}
+            className="MuiSvgIcon-root"
+          />
+          <Typography
+            sx={{
+              color: mode === 'light' || selected ? 'white' : 'black',
+              color: selected ? 'white' : 'inherit',
+            }}
+            className="MuiTypography-root"
+            level="title-sm">
+            {text}
+          </Typography>
+          {children}
+        </ListItemButton>
+      </Link>
     </ListItem>
   );
 };
@@ -180,10 +182,10 @@ export default function Sidebar() {
             '--ListItem-radius': (theme) => theme.vars.radius.sm,
           }}>
           <div>
-            <ListItemWithIcon IconComponent={HomeRoundedIcon} text="Dashboard" selected={selected === 'home'} onClick={() => handleClick('home')} />
-            <ListItemWithIcon IconComponent={DashboardRoundedIcon} text="Kategori" selected={selected === 'kategori'} onClick={() => handleClick('kategori')} />
-            <ListItemWithIcon IconComponent={AssignmentRoundedIcon} text="Barang" selected={selected === 'barang'} onClick={() => handleClick('barang')} />
-            <ListItemWithIcon IconComponent={GroupRoundedIcon} text="Users" selected={selected === 'users'} onClick={() => handleClick('users')}>
+            <ListItemWithIcon IconComponent={HomeRoundedIcon} text="Dashboard" href="/admin" selected={selected === 'home'} onClick={() => handleClick('home')} />
+            <ListItemWithIcon IconComponent={DashboardRoundedIcon} text="Kategori" href="/admin/kategori" selected={selected === 'kategori'} onClick={() => handleClick('kategori')} />
+            <ListItemWithIcon IconComponent={AssignmentRoundedIcon} text="Barang" href="/admin/barang" selected={selected === 'barang'} onClick={() => handleClick('barang')} />
+            <ListItemWithIcon IconComponent={GroupRoundedIcon} text="Users" href="/admin/users" selected={selected === 'users'} onClick={() => handleClick('users')}>
               {showChip && (
                 <Chip size="lg" variant="solid" color="primary" sx={{ right: -130, color: 'white' }}>
                   4

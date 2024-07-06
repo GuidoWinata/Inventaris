@@ -1,14 +1,19 @@
-/* .table-header-kategori th {
+.table-header {
+  background-color: #dde9f9;
+}
+
+.table-header-kategori th {
   height: 70px;
   align-content: center;
   background-color: #dde9f9;
   font-weight: bold;
+  text-align: center;
 }
 
 .table-body-kategori td {
-  height: 60px;
+  height: auto;
 }
 
 .kategori-button-wrapper Button {
   width: 100px;
-} */
+}

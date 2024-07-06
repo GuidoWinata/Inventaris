@@ -7,7 +7,7 @@ import { CssVarsProvider, extendTheme } from '@mui/joy/styles';
 export const Sect2 = () => {
   return (
     <>
-      <Grid container spacing={3} mt={4} sx={{ width: '100%' }}>
+      <Grid container spacing={3} mt={3} sx={{ width: '100%' }}>
         <Grid item xs={4}>
           <Box
             sx={{
