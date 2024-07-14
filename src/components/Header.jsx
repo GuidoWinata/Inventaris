@@ -20,6 +20,8 @@ export default function Header() {
         return 'History';
       case '/admin':
         return 'Dashboard';
+      case '/admin/profil':
+        return 'Profil';
     }
   };
   return (

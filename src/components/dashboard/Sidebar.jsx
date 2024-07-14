@@ -192,22 +192,24 @@ export default function Sidebar() {
                 </Chip>
               )}
             </ListItemWithIcon>
-            <ListItemWithIcon IconComponent={HistoryRounded} text="History" selected={selected === 'history'} onClick={() => handleClick('history')} />
+            <ListItemWithIcon IconComponent={HistoryRounded} text="History" href="/admin/history" selected={selected === 'history'} onClick={() => handleClick('history')} />
           </div>
         </List>
       </Box>
 
       <Divider />
-      <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', height: 60 }}>
-        <Avatar variant="outlined" size="lg" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=286" />
-        <Box sx={{ minWidth: 0, flex: 1 }}>
-          <Typography level="title-lg">Siriwat K.</Typography>
-          <Typography level="body-md">siriwatk@test.com</Typography>
+      <Link to="/admin/profil" style={{ textDecoration: 'none', color: 'inherit' }}>
+        <Box sx={{ display: 'flex', gap: 1, alignItems: 'center', height: 60 }}>
+          <Avatar variant="outlined" size="lg" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=286" />
+          <Box sx={{ minWidth: 0, flex: 1 }}>
+            <Typography level="title-lg">Siriwat K.</Typography>
+            <Typography level="body-md">siriwatk@test.com</Typography>
+          </Box>
+          <IconButton size="md" variant="plain" color="danger">
+            <LogoutRoundedIcon />
+          </IconButton>
         </Box>
-        <IconButton size="md" variant="plain" color="danger">
-          <LogoutRoundedIcon />
-        </IconButton>
-      </Box>
+      </Link>
     </Sheet>
   );
 }
