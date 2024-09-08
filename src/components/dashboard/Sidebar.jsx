@@ -5,7 +5,8 @@ import Box from '@mui/joy/Box';
 import Chip from '@mui/joy/Chip';
 import Divider from '@mui/joy/Divider';
 import IconButton from '@mui/joy/IconButton';
-import Logo from '/assets/Logo.svg';
+import Logo from '/assets/Logo-inventaris.png';
+import LogoDark from '/assets/Logo-dark.png';
 import List from '@mui/joy/List';
 import { Link } from 'react-router-dom';
 import ListItem from '@mui/joy/ListItem';
@@ -92,6 +93,8 @@ const ListItemWithIcon = ({ IconComponent, text, href, onClick, selected, childr
 };
 
 export default function Sidebar() {
+  // const { mode, setMode } = ColorSchemeToggle();
+  const [mode, setMode] = useState('light');
   const [selected, setSelected] = useState(false);
   const [showChip, setShowChip] = useState(true);
 
@@ -101,6 +104,8 @@ export default function Sidebar() {
       setShowChip(false);
     }
   };
+
+  const logoSrc = mode === 'light' ? LogoDark : Logo;
 
   return (
     <Sheet
@@ -155,12 +160,9 @@ export default function Sidebar() {
       />
       <Box sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
         <IconButton variant="soft" color="#DDE9F9" size="sm">
-          <img src={Logo} alt="Logo" />
+          <img src={Logo} alt="Logo" className="h-[95px]" />
         </IconButton>
-        <Typography level="title-lg" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-          IM SMK
-        </Typography>
-        <ColorSchemeToggle sx={{ ml: 'auto' }} />
+        {/* <ColorSchemeToggle sx={{ ml: 'auto' }} mode={mode} setMode={setMode} /> */}
       </Box>
       {/* <Input size="sm" startDecorator={<SearchRoundedIcon />} placeholder="Search" /> */}
       <Box

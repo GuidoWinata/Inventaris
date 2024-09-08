@@ -7,7 +7,7 @@ import { maintenance } from '../data';
 export const TblDash1 = () => {
   return (
     <>
-      <Grid container sx={{ width: '100%', marginRight: 2.5 }}>
+      <Grid container sx={{ width: '100%', marginRight: 3.5 }}>
         <Grid item xs={12}>
           <Box
             sx={{
@@ -15,7 +15,7 @@ export const TblDash1 = () => {
               width: 'full',
               height: 410,
               boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)',
-              marginBottom: 3,
+
               padding: 2,
             }}>
             <Box className="header-wrapper" padding={3} paddingY={2}>

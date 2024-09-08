@@ -7,7 +7,7 @@ import { dipinjam } from '../data';
 export const TblDash2 = () => {
   return (
     <>
-      <Grid container sx={{ width: '100%', marginRight: 2.5 }}>
+      <Grid container sx={{ width: '100%', marginRight: 3.5 }}>
         <Grid item xs={12}>
           <Box
             sx={{

@@ -66,19 +66,12 @@ export default function Profil() {
           height: 'auto',
         }}>
         <Typography fontSize={30} fontWeight={650}>
-          Negga Deluxe Pro Max
+          Negga Deluxe
         </Typography>
         <Typography fontSize={20} fontWeight={300}>
           Niggadeluxe@gmail.com
         </Typography>
       </Box>
-      {/* <Box
-        className="input-wrapper"
-        sx={{
-          width: '100%',
-          height: 400,
-          bgcolor: 'red',
-        }}></Box> */}
       <FormControl
         sx={{
           px: 6,
@@ -87,7 +80,7 @@ export default function Profil() {
           position: 'relative',
         }}>
         <FormLabel sx={{ fontSize: 21 }}>Nama Lengkap</FormLabel>
-        <Input variant="outlined" size="lg" defaultValue="Negga Deluxe Pro Max" placeholder="Nama Lengkap" sx={{ mb: 3 }} />
+        <Input variant="outlined" size="lg" defaultValue="Negga Deluxe" placeholder="Nama Lengkap" sx={{ mb: 3 }} />
         <FormLabel sx={{ fontSize: 21 }}>Email</FormLabel>
         <Input variant="outlined" size="lg" defaultValue="Niggadeluxe@gmail.com" placeholder="Email" />
         <Grid container sx={{ position: 'absolute', bottom: 0, right: 0, width: '24%' }}>
